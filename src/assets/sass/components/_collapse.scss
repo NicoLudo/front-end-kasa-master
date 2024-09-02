@@ -1,0 +1,56 @@
+// _collapse.scss
+.collapse-container {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collapse-title {
+  position: relative;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.collapse-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.collapse-arrow--open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.collapse-content {
+  background-color: $secondary-color;
+  color: $primary-color;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 10px 10px 0px 10px;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  position: relative;
+  bottom: 10px;
+  z-index: -1;
+}
+
+.collapse-content--open {
+  max-height: 500px;
+}
+
+@media (max-width: 425px) {
+  .collapse-container {
+    width: 100%;
+  }
+}

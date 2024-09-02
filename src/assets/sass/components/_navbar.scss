@@ -1,0 +1,41 @@
+// _navbar.scss
+nav ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  height: 2.5rem;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.nav-items li a.active {
+  text-decoration: underline;
+  color: $primary-color;
+}
+
+@media (max-width: 320px) {
+  .nav-items {
+    flex-direction: column;
+  }
+
+  .logo img {
+    height: 2rem;
+  }
+}

@@ -1,0 +1,27 @@
+// _404.scss
+.page404-container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.page404-title {
+  font-size: 10rem;
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 0;
+}
+
+.page404-content {
+  font-size: 2rem;
+  text-align: center;
+  color: $primary-color;
+}
+
+.page404-link {
+  text-align: center;
+}
+
+.page404-link a {
+  color: $primary-color;
+}
