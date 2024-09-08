@@ -1,6 +1,9 @@
 // _container.scss
+$container-max-width: 90%;
+$container-min-width: 85%;
+
 .main-container {
   margin: auto;
-  max-width: 90%;
-  min-width: 85%;
+  max-width: $container-max-width;
+  min-width: $container-min-width;
 }

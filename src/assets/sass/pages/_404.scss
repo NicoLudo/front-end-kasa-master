@@ -1,25 +1,27 @@
 // _404.scss
+$page404-gap: 150px;
+$page404-title-font-size: 10rem;
+$page404-content-font-size: 2rem;
+$text-align-center: center;
+
 .page404-container {
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: $page404-gap;
+}
+
+.page404-title, .page404-content, .page404-link {
+  text-align: $text-align-center;
+  color: $primary-color;
 }
 
 .page404-title {
-  font-size: 10rem;
-  text-align: center;
-  color: $primary-color;
+  font-size: $page404-title-font-size;
   margin-bottom: 0;
 }
 
 .page404-content {
-  font-size: 2rem;
-  text-align: center;
-  color: $primary-color;
-}
-
-.page404-link {
-  text-align: center;
+  font-size: $page404-content-font-size;
 }
 
 .page404-link a {

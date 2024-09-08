@@ -1,56 +1,70 @@
 // _product.scss
-.product-container {
-  position: relative;
-  width: 100%;
-}
+$primary-gap: 10px;
+$primary-radius: 1.5rem;
+$host-picture-size: 5rem;
+$host-picture-size-small: 3rem;
+$product-picture-height: 30rem;
+$rating-star-size: 25px;
+$button-transform: translateY(-50%);
+$mobile-max-width: 425px;
 
-.product-pictures {
+.product-container, .product-pictures {
   position: relative;
   width: 100%;
 }
 
 .product-picture {
   width: 100%;
-  height: 30rem;
+  height: $product-picture-height;
   object-fit: cover;
-  border-radius: 1.5rem;
+  border-radius: $primary-radius;
 }
 
 .slide-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: $button-transform;
   background: transparent;
   border: none;
-}
 
-.slide-left {
-  left: 10px;
-  transform: rotate(180deg) translateY(53%);
-}
+  &.slide-left {
+    left: $primary-gap;
+    transform: rotate(180deg) translateY(53%);
+  }
 
-.slide-right {
-  right: 10px;
+  &.slide-right {
+    right: $primary-gap;
+  }
+
+  img {
+    @media (max-width: $mobile-max-width) {
+      height: 30px;
+    }
+  }
 }
 
 .slider-indicator {
   position: absolute;
-  bottom: 10px;
+  bottom: $primary-gap;
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: $primary-gap;
   width: 100%;
   text-align: center;
 }
 
-.product-title {
+.product-title,
+.product-location,
+.host-name {
   color: $primary-color;
+}
+
+.product-title {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .product-location {
-  color: $primary-color;
-  margin: 5px 5px 0px 0px;
+  margin: $primary-gap $primary-gap 0 0;
 }
 
 .host-rating-tags-info {
@@ -58,7 +72,10 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 0.6rem;
-  margin-top: 0.6rem;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column-reverse;
+  }
 }
 
 .host-rating,
@@ -67,6 +84,19 @@
   flex-direction: column;
   justify-content: space-around;
   gap: 20px;
+
+  @media (max-width: $mobile-max-width) {
+    gap: 15px;
+  }
+}
+
+.host-rating {
+  @media (max-width: $mobile-max-width) {
+    margin-top: 0.6rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .host-info {
@@ -74,16 +104,16 @@
   align-items: center;
   max-width: 10rem;
   text-align: right;
-  gap: 10px;
-}
-
-.host-name {
-  color: $primary-color;
+  gap: $primary-gap;
 }
 
 .host-picture {
-  width: 5rem;
+  width: $host-picture-size;
   border-radius: 100%;
+
+  @media (max-width: $mobile-max-width) {
+    width: $host-picture-size-small;
+  }
 }
 
 .product-equipments {
@@ -96,6 +126,11 @@
   justify-content: space-between;
   gap: 50px;
   margin-top: 0.6rem;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .product-tags {
@@ -104,67 +139,28 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 10px;
+  gap: $primary-gap;
 }
 
 .product-tag {
   color: #ffffff;
   background-color: $primary-color;
-  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  padding: 0.2rem 0.8rem;
   font-size: 0.7rem;
   border-radius: 0.5rem;
 }
 
 .product-rating {
   display: flex;
-  gap: 10px;
+  gap: $primary-gap;
+
+  @media (max-width: $mobile-max-width) {
+    gap: 5px;
+  }
 }
 
 .rating-stars {
   object-fit: contain;
-  width: 25px;
-  height: 25px;
-}
-
-@media (max-width: 425px) {
-  .slide-button img {
-    height: 30px;
-  }
-
-  .host-rating-tags-info {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .tags-info {
-    gap: 15px;
-  }
-
-  .host-rating {
-    margin-top: 0.6rem;
-    flex-direction: row-reverse;
-    gap: inherit;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .host-picture {
-    width: 3rem;
-    border-radius: 100%;
-  }
-
-  .product-description-equipements {
-    flex-direction: column;
-    gap: 0px;
-  }
-
-  .product-host-info-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-rating {
-    gap: 5px;
-  }
+  width: $rating-star-size;
+  height: $rating-star-size;
 }

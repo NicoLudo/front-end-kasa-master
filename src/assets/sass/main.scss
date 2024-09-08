@@ -1,10 +1,18 @@
 // main.scss
+
+// Utilities
 @import 'utils/variables';
+
+// Layout
 @import 'layout/container';
-@import 'components/navbar';
+
+// Components
 @import 'components/banner';
 @import 'components/cards';
-@import 'pages/product';
 @import 'components/collapse';
+@import 'components/footer';
+@import 'components/navbar';
+
+// Pages
 @import 'pages/404';
-@import 'layout/footer';
+@import 'pages/product';

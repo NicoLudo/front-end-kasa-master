@@ -1,41 +1,53 @@
 // _navbar.scss
-nav ul {
-  list-style: none;
-}
+$nav-padding-top: 1rem;
+$nav-margin-bottom: 2rem;
+$nav-gap: 1rem;
+$logo-height: 2.5rem;
+$logo-height-small: 2rem;
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
-  margin-bottom: 2rem;
-}
+  padding-top: $nav-padding-top;
+  margin-bottom: $nav-margin-bottom;
 
-.logo img {
-  height: 2.5rem;
-}
-
-.nav-items {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-items li a {
-  text-decoration: none;
-  color: $primary-color;
-}
-
-.nav-items li a.active {
-  text-decoration: underline;
-  color: $primary-color;
-}
-
-@media (max-width: 320px) {
-  .nav-items {
-    flex-direction: column;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .logo img {
-    height: 2rem;
+  .logo {
+    img {
+      height: $logo-height;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    gap: $nav-gap;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover, &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .nav-items {
+      flex-direction: column;
+      text-align: right;
+    }
+
+    .logo img {
+      height: $logo-height-small;
+    }
   }
 }

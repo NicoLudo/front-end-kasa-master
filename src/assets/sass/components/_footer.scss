@@ -1,0 +1,23 @@
+// _footer.scss
+$footer-padding: 1.5rem;
+$footer-margin-top: 2rem;
+$footer-bg-color: #000000;
+$footer-text-color: #ffffff;
+$footer-logo-height: 1.5rem;
+$paragraph-margin: 1rem 0 0;
+
+footer {
+  padding: $footer-padding;
+  margin-top: $footer-margin-top;
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  text-align: center;
+
+  p {
+    margin: $paragraph-margin;
+  }
+
+  .footer-logo {
+    height: $footer-logo-height;
+  }
+}

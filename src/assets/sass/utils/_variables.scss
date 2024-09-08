@@ -1,9 +1,10 @@
 // _variables.scss
 $primary-color: #FF6060;
 $secondary-color: #F6F6F6;
+$font-family-base: 'Montserrat', sans-serif;
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-family-base;
 }
 
 body {
