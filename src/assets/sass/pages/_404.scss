@@ -2,6 +2,8 @@
 $page404-gap: 150px;
 $page404-title-font-size: 10rem;
 $page404-content-font-size: 2rem;
+$page404-title-font-size-mobile: 7rem;
+$page404-content-font-mobile: 1.5rem;
 $text-align-center: center;
 
 .page404-container {
@@ -18,10 +20,18 @@ $text-align-center: center;
 .page404-title {
   font-size: $page404-title-font-size;
   margin-bottom: 0;
+
+  @media(max-width: 425px) {
+    font-size: $page404-title-font-size-mobile;
+  }
 }
 
 .page404-content {
   font-size: $page404-content-font-size;
+
+  @media(max-width: 425px) {
+    font-size: $page404-content-font-mobile;
+  }
 }
 
 .page404-link a {
